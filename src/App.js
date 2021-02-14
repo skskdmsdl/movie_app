@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 // npm i axios를 통해 axios 설치
 import axios from "axios";
 import Movie from "./Movie";
+import "./App.css";
 
 class App extends React.Component{
   state = {
