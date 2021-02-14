@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from "prop-types"; 
 // npm i axios를 통해 axios 설치
 import axios from "axios";
+import Movie from "./Movie";
 
 class App extends React.Component{
   state = {
@@ -13,7 +14,11 @@ class App extends React.Component{
   getMovies = async() => {
     // 함수 내부에 await 뭘 기다리길 원해? axios? 응(완료까지 시간이 좀 필요하기에 await사용)
     // movies.data.data를 아래처럼 나타낼 수 있음
-    const { data: { data: { movies }}} = await axios.get("https://yts-proxy.now.sh/list_movies.json");
+    const { 
+      data: { 
+        data: { movies }
+      }
+    } = await axios.get("https://yts-proxy.now.sh/list_movies.json?sort_by=rating");
     // movies:movies를 movies로 해도 자바스크립트가 이해함
     this.setState({ movies, isLoading: false });
     
@@ -23,8 +28,23 @@ class App extends React.Component{
     this.getMovies();
   };
   render() {
-    const { isLoading } = this.state;
-    return <div>{this.state.isLoading ? "Loading" : "We are ready"}</div>;
+    const { isLoading, movies } = this.state;
+    return (
+      <div>
+        {isLoading 
+          ? "Loading..." 
+          : movies.map(movie => (
+            <Movie 
+              key={movie.id}
+              id={movie.id}
+              year={movie.year} 
+              title={movie.title} 
+              summary={movie.summary} 
+              poster={movie.medium_cover_image} 
+            />
+          ))}
+      </div>
+    );
   };
 }
   
