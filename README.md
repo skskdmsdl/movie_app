@@ -6,3 +6,4 @@ React_Movie_App_Project
 
 # Skills
 * React
+* JavaScript
