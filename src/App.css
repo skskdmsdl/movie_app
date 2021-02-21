@@ -25,19 +25,6 @@ body,
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 300;
 }
 
-.movies {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 50px;
-    width: 50px;
-}
-
-.movies .movie {
-    width: 45%;
-    background-color: white;
-    margin-bottom: 70px;
-
-}

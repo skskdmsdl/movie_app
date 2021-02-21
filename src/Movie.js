@@ -5,18 +5,18 @@ import "./Movie.css";
 // movie컴포넌트는 state를 가지고 있지 않기 때문에 class 컴포넌트일 필요 없음(function 컴포넌트 사용)
 function Movie({year, title, summary, poster, genres}){
     return (
-        <div className="movies__movie">
+        <div className="movie">
             <img src={poster} alt={title} title={title} />
             <div className="movie__data">
                 <h3 className="movie__title">{title}</h3>
                 <h5 className="movie__year">{year}</h5>
-                <ul className="genres">
+                <ul className="movie__genres">
                     {/* map은 index argument를 제공함!!  */}
                     {genres.map((genre, index) => ( 
                         <li key={index} className="genres__genre">{genre}</li>
                     ))}
                 </ul>
-                <p className="movie__summary">{summary}</p>
+                <p className="movie__summary">{summary.slice(0, 140)}...</p>
             </div>
         </div>
     );
