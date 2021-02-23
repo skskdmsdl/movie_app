@@ -9,5 +9,5 @@ React_Movie_App_Project
 * JavaScript
 * HTML/CSS
 
-# Result
+# GitHub Site
 https://skskdmsdl.github.io/movie_app/
