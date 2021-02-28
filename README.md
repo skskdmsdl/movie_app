@@ -9,5 +9,5 @@ React_Movie_App_Project(개인 프로젝트)
 * JavaScript
 * HTML/CSS
 
-# GitHub Site 👇
+# GitHub Page 👇
 https://skskdmsdl.github.io/movie_app/
