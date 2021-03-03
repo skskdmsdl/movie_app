@@ -14,7 +14,7 @@ function App(){
       <Navigation />
       <Route path="/" exact={true} component={Home} />
       <Route path="/about" component={About} />
-      <Route path="/movie-detail" component={Detail} />
+      <Route path="/movie/:id" component={Detail} />
       {/* <Route path="/home">
         <h1>Home</h1>
       </Route>
