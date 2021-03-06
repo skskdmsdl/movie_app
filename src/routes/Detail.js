@@ -16,6 +16,7 @@ class Detail extends React.Component {
           return (
             <div>
               <div>{location.state.title}</div>
+              <div>{location.state.year}</div>
               <div>{location.state.summary}</div>
             </div>
           );
