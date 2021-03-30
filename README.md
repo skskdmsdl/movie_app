@@ -1,5 +1,5 @@
 # Movie App 
-React_Movie_App_Project(개인 프로젝트)
+React_Movie_App_Project(개인 영화정보 사이트 프로젝트)
 
 # Overview
 영화 정보 사이트 
